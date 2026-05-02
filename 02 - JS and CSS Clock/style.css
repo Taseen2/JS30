@@ -1,0 +1,106 @@
+    /* ========================================
+    GLOBAL STYLES
+   ======================================== */
+    html {
+        background: url('background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'helvetica neue', sans-serif;
+        text-align: center;
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ========================================
+    CLOCK CONTAINER
+   ======================================== */
+    .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 10px solid white;
+        border-radius: 50%;
+        position: relative;
+        padding: 2rem;
+        box-shadow:
+            0 0 0 4px rgba(0, 0, 0, 0.1),
+            inset 0 0 0 3px #EFEFEF,
+            inset 0 0 10px black,
+            0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: translateY(-3px);
+    }
+
+    /* ========================================
+    CLOCK HANDS
+   ======================================== */
+    .hand {
+        width: 50%;
+        height: 5px;
+        background: white;
+        position: absolute;
+        top: 50%;
+        margin-top: -3px;
+        right: 50%;
+        z-index: 3;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    /* Hour hand - shortest, completes rotation every 12 hours */
+    .hour-hand {
+        width: 28%;
+    }
+
+    /* Minute hand - medium length, completes rotation every 60 minutes */
+    .min-hand {
+        width: 38%;
+    }
+
+    /* Second hand - longest, completes rotation every 60 seconds */
+    .second-hand {
+        width: 45%;
+        height: 2px;
+        background: #e74c3c;
+        z-index: 4;
+    }
+
+    /* ========================================
+    CLOCK NUMBERS (1-12)
+   ======================================== */
+    .number {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        top: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        z-index: 2;
+        /* Position each number around clock face (30deg increments) */
+        transform: rotate(calc(var(--num) * 30deg)) translateY(-130px) rotate(calc(var(--num) * -30deg));
+    }
