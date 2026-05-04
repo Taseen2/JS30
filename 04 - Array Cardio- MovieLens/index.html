@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLens</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Movie<span>Lens</span></div>
+        <div class="stats-bar" id="header-stats" aria-live="polite"></div>
+    </header>
+    <main>
+        <div class="controls">
+            <div class="search-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                    stroke="white">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" stroke-linecap="round" />
+                </svg>
+                <input type="text" id="search" placeholder="Search movies..." aria-label="Search movies">
+            </div>
+            <select id="genre-filter" aria-label="Filter by genre">
+                <option value="all">All genres</option>
+            </select>
+
+            <select id="sort-by" aria-label="Sort movies">
+                <option value="year-desc">Newest first</option>
+                <option value="year-asc">Oldest first</option>
+                <option value="rating-desc">Top rated</option>
+                <option value="rating-asc">Lowest rated</option>
+                <option value="title-asc">A → Z</option>
+            </select>
+
+            <select id="decade-filter" aria-label="Filter by decade">
+                <option value="all">All decades</option>
+                <option value="2020">2020s</option>
+                <option value="2010">2010s</option>
+                <option value="2000">2000s</option>
+                <option value="1990">1990s</option>
+                <option value="1980">1980s</option>
+            </select>
+        </div>
+
+        <div class="summary">
+            <div class="stat-card">
+                <div class="label">Showing</div>
+                <div class="value" id="stat-count">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Avg Rating</div>
+                <div class="value" id="stat-avg">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Top Genre</div>
+                <div class="value" id="stat-genre">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Avg Year</div>
+                <div class="value" id="stat-year">-</div>
+            </div>
+        </div>
+
+        <div class="movies-grid" id="grid"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
