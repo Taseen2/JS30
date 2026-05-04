@@ -32,7 +32,7 @@ The main goal is to strengthen my understanding of:
 - **Day 01** – JavaScript Drum Kit  
 - **Day 02** – JS and CSS Clock  
 - **Day 03** – CSS Variables  
-- **Day 04** – Array Cardio Day 1  
+- **Day 04** – Array Cardio-MovieLens 
 - **Day 05** – Flex Panel Gallery  
 - **Day 06** – Type Ahead  
 - **Day 07** – Array Cardio Day 2  
