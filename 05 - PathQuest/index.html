@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lost Lamp of Varanasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cinzel+Decorative:wght@400;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Decorations -->
+  <div class="bg-decorations">
+    <div class="diya diya-1">🪔</div>
+    <div class="diya diya-2">🪔</div>
+    <div class="diya diya-3">🪔</div>
+    <div class="diya diya-4">🪔</div>
+  </div>
+
+  <!-- SCREEN 1: Intro + Level 1 choices -->
+  <div id="screen-intro" class="screen active">
+    <header>
+      <div class="header-ornament">✦ ✦ ✦</div>
+      <h1>The Lost Lamp<br/><span class="subtitle">of Varanasi</span></h1>
+      
+    </header>
+
+    <section class="intro">
+      <p>On the night of <em>Deepawali</em>, the whole city of Varanasi glows like a sky full of stars. Diyas shine on the ghats, drums echo in the streets, and the smell of sweets fills the air.</p>
+      <p>But tonight, something is wrong.</p>
+      <p>A sacred lamp called <strong>The Jyoti of Ganga</strong> has vanished from the old temple near the river. A priest whispers, <em>"Without it, the festival may lose its blessing."</em></p>
+      <p class="hero-line">You are the only one close enough to find it.</p>
+      <p>A strange note lies on the temple steps:</p>
+      <blockquote>"Find the lamp before the moon rises too high."</blockquote>
+      <p>You take a deep breath and begin your journey.</p>
+    </section>
+
+    <p class="choose-prompt" >Where do you go first?</p>
+
+    <div class="panels" id="level1-panels">
+      <div class="panel" data-choice="1" style="--panel-bg: url('https://images.unsplash.com/photo-1646200207048-016503f1e3cb?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="panel-inner">
+          <div class="choice-badge">Choice 1</div>
+          <h2 class="panel-title">Follow the River Path</h2>
+          <p class="panel-desc">Chase the glow of floating lamps along the misty Ganga ghats</p>
+          <div class="panel-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="panel" data-choice="2" style="--panel-bg: url('https://images.unsplash.com/photo-1767278595214-f680b832935f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="panel-inner">
+          <div class="choice-badge">Choice 2</div>
+          <h2 class="panel-title">Enter the Crowded Market</h2>
+          <p class="panel-desc">Dive into the glittering lanes of silk, spice, and secret songs</p>
+          <div class="panel-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="panel" data-choice="3" style="--panel-bg: url('https://images.unsplash.com/photo-1554554497-0095c34db3ec?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="panel-inner">
+          <div class="choice-badge">Choice 3</div>
+          <h2 class="panel-title">Climb the Temple Tower</h2>
+          <p class="panel-desc">Ascend the ancient stone where monkeys leap and bells ring in wind</p>
+          <div class="panel-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: Level 2 sub-choices -->
+  <div id="screen-choice" class="screen">
+    <button class="back-btn" id="backBtn">← Back</button>
+
+    <div class="choice-header" id="choiceHeader"></div>
+
+    <div class="choice-story" id="choiceStory"></div>
+
+    <p class="choose-prompt">What do you do?</p>
+
+    <div class="panels" id="level2-panels">
+      <!-- filled by JS -->
+    </div>
+  </div>
+
+  <!-- SCREEN 3: Ending -->
+  <div id="screen-ending" class="screen">
+    <button class="back-btn" id="backBtn2">← Choose Again</button>
+    <div class="ending-wrap">
+      <div class="ending-badge" id="endingBadge"></div>
+      <h2 class="ending-title" id="endingTitle"></h2>
+      <div class="ending-story" id="endingStory"></div>
+      <button class="restart-btn" id="restartBtn">🪔 Start Over</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
