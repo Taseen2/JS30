@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Product Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Premium Search</h1>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search our premium collection..." autofocus
+                        autocomplete="off">
+                </div>
+                <button id="cart-toggle" class="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <div id="product-list" class="product-grid">
+                <div class="loading">Discovering products...</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Overlay for Cart Sidebar -->
+    <div id="overlay" class="overlay"></div>
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items-container">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">Rs. 0.00</span>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

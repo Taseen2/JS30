@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDraw - Professional Digital Illustration Tool</title>
+    
+    <!-- External Styles & Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Main Navigation / Toolbar -->
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <span>🎨</span> ProDraw <span class="badge">PRO</span>
+            </div>
+        </div>
+        
+        <!-- Central View Controls -->
+        <div class="nav-center">
+            <!-- History Management -->
+            <div class="nav-group history-controls toolbar-group">
+                <button id="undoBtn" class="btn-icon" title="Undo" disabled>↩️</button>
+                <button id="redoBtn" class="btn-icon" title="Redo" disabled>↪️</button>
+            </div>
+            
+            <div class="nav-divider"></div>
+            
+            <!-- Dynamic Zoom Management -->
+            <div class="nav-group zoom-controls toolbar-group">
+                <button id="zoomOut" class="btn-icon">➖</button>
+                <div class="zoom-input-wrapper">
+                    <input type="text" id="zoomInput" class="zoom-control-input" value="100%">
+                </div>
+                <button id="zoomIn" class="btn-icon">➕</button>
+                <button id="zoomReset" class="btn-text">Reset</button>
+            </div>
+        </div>
+
+        <!-- System Actions -->
+        <div class="header-actions">
+            <!-- Theme Toggle (☀️/🌙) -->
+            <button id="themeToggle" class="btn-icon btn-mode-toggle" title="Toggle Dark/Light Mode">
+                <span class="mode-icon">🌙</span>
+            </button>
+            
+            <!-- File Export -->
+            <button id="saveBtn" class="btn-export" title="Export Image">
+                <span>💾</span> Export Image
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sidebar: Tool & Setting Panels -->
+        <aside class="sidebar">
+            <!-- Brush Selection -->
+            <div class="tool-card">
+                <label class="card-label">Brushes</label>
+                <div class="tool-grid">
+                    <button id="brushBtn" class="active" title="Brush">🖌️ <span>Brush</span></button>
+                    <button id="highlighterBtn" title="Highlighter">🖍️ <span>Marker</span></button>
+                    <button id="rainbowBtn" title="Rainbow Brush">🌈 <span>Magic</span></button>
+                    <button id="fillBtn" title="Bucket Fill">🪣 <span>Fill</span></button>
+                </div>
+            </div>
+
+            <!-- Global Style Settings -->
+            <div class="tool-card">
+                <label class="card-label">Color & Size</label>
+                <div class="settings-box">
+                    <!-- Primary Color Selection -->
+                    <div class="setting-row">
+                        <input type="color" id="colorPicker" class="color-picker-large" title="Select Color" value="#000000">
+                    </div>
+                    
+                    <!-- Quick Access History Colors -->
+                    <div class="setting-row">
+                        <div id="recentColors" class="recent-colors"></div>
+                    </div>
+                    
+                    <!-- Line Width Controls -->
+                    <div class="setting-row size-info">
+                        <span>Stroke Size</span>
+                        <span id="sizeValue">10px</span>
+                    </div>
+                    <input type="range" id="lineWidth" min="1" max="200" value="10" class="range-slider">
+                </div>
+            </div>
+
+            <!-- Modification Tools -->
+            <div class="tool-card">
+                <label class="card-label">Edit</label>
+                <div class="tool-grid">
+                    <button id="moveBtn" title="Move Tool">🖐️ <span>Move</span></button>
+                    <button id="eraserBtn" title="Brush Eraser">🧽 <span>Erase</span></button>
+                </div>
+            </div>
+
+            <!-- Geometric Shape Generators -->
+            <div class="tool-card">
+                <label class="card-label">Shapes</label>
+                <div class="tool-grid">
+                    <button id="lineBtn" title="Straight Line">📏 <span>Line</span></button>
+                    <button id="rectBtn" title="Rectangle">⬜ <span>Rect</span></button>
+                    <button id="circleBtn" title="Circle">⭕ <span>Circle</span></button>
+                    <button id="moreBtn" title="More Shapes">≡ <span>More</span></button>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer Actions -->
+            <div class="sidebar-footer">
+                <button id="clearBtn" class="btn-danger" title="Clear Canvas">🗑️ <span>Clear All</span></button>
+            </div>
+        </aside>
+
+        <!-- Canvas Workspace: Centered Area -->
+        <section class="workspace">
+            <div id="canvas-wrapper">
+                <!-- Main Layer: Holds final artwork -->
+                <canvas id="draw"></canvas>
+                <!-- UI Layer: Handles hover previews and live shape drawing -->
+                <canvas id="overlay"></canvas>
+            </div>
+        </section>
+
+        <!-- Dynamic Context Info -->
+        <div class="status-bar">
+            Active: <span id="activeTool">Brush</span> • <span id="currentSize">10px</span>
+        </div>
+    </main>
+
+    <!-- Main Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
