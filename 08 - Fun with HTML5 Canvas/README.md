@@ -2,7 +2,7 @@
 
 ProDraw is a high-performance, production-quality digital illustration engine built with modern web standards. Designed for professional creators, it combines a sleek, glassmorphic UI with a powerful drawing engine capable of organic, smooth strokes and dynamic canvas manipulation.
 
-![ProDraw Preview](https://via.placeholder.com/1200x600?text=ProDraw+Professional+Edition) <!-- Replace with actual screenshot later -->
+[![image.png](https://i.postimg.cc/3wb0Pj5r/image.png)](https://postimg.cc/06DNSwyh)
 
 ## ✨ Key Features
 
@@ -14,7 +14,7 @@ ProDraw is a high-performance, production-quality digital illustration engine bu
 
 ### 📐 Intuitive Workspace
 - **Visual Canvas Resizer:** A native, interactive drag-to-resize handle at the bottom-right corner that allows you to customize your workspace freely.
-- **Dynamic Zoom System:** Precision zoom from 10% to 500% with mouse-wheel support and manual percentage entry.
+- **Dynamic Zoom System:** Precision zoom from 10% to 500% with mouse-wheel support, keyboard shortcuts, and manual percentage entry.
 - **Pro-Level Pan & Move:** Move tool for selecting and repositioning artwork segments across the canvas.
 
 ### 🎨 Premium UI/UX
@@ -25,9 +25,8 @@ ProDraw is a high-performance, production-quality digital illustration engine bu
 
 ### 🕒 Workflow Efficiency
 - **Unlimited Undo/Redo:** A robust history stack (up to 30 steps) for worry-free creativity.
+- **Keyboard Shortcuts:** Extensive hotkey support for tools, zoom, and history management.
 - **PNG Export:** High-quality image export with white-background optimization.
-
----
 
 ## 🛠️ Technical Highlights
 
@@ -37,12 +36,5 @@ ProDraw is a high-performance, production-quality digital illustration engine bu
 - **State Persistence:** Utilizes `LocalStorage` to remember your theme preferences and color usage history across sessions.
 - **Optimization:** Debounced `ResizeObserver` and `requestAnimationFrame` ensure the UI remains buttery smooth even during complex operations.
 
-## 🚀 Getting Started
-
-1.  Clone the repository.
-2.  Open `index.html` in any modern web browser.
-3.  Start creating!
-
----
 
 Developed with ❤️ for the creative community.
