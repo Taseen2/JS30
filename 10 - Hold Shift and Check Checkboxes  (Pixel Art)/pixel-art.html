@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Studio - Advanced Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation / Toolbar -->
+  <header class="app-header">
+    <div class="logo">
+      <span class="icon">🎨</span> Pixel Art
+    </div>
+
+    <div class="top-toolbar">
+      <!-- Undo/Redo Group -->
+      <div class="toolbar-group">
+        <div class="btn-group-pill">
+          <button id="undoBtn" class="btn-icon" title="Undo (Ctrl+Z)">↩️</button>
+          <button id="redoBtn" class="btn-icon" title="Redo (Ctrl+Y)">↪️</button>
+        </div>
+      </div>
+
+      <!-- Grid Settings Group -->
+      <div class="toolbar-group">
+        <label class="label-small">GRID SIZE</label>
+        <select id="gridSizeSelect">
+          <option value="8">8x8</option>
+          <option value="16">16x16</option>
+          <option value="32" selected>32x32</option>
+          <option value="64">64x64</option>
+        </select>
+      </div>
+
+      <!-- View Controls Group -->
+      <div class="toolbar-group">
+        <div class="btn-group-pill">
+          <button id="zoomOutBtn" class="btn-icon" title="Zoom Out">➖</button>
+          <span id="zoomLevel" class="text-bold zoom-text">100%</span>
+          <button id="zoomInBtn" class="btn-icon" title="Zoom In">➕</button>
+        </div>
+      </div>
+
+      <!-- Action Group -->
+      <div class="toolbar-group">
+        <button id="exportBtn" class="btn-primary" title="Download as PNG">💾 Export PNG</button>
+      </div>
+    </div>
+
+    <!-- Global Settings -->
+    <div class="theme-toggle-wrapper">
+      <button id="themeToggle" class="btn-icon" title="Toggle Theme (Light/Dark)">🌓</button>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <!-- Sidebar Controls -->
+    <aside class="sidebar">
+      <!-- Colors & Palette -->
+      <section class="sidebar-section">
+        <div class="section-header">
+          <span class="icon">🎨</span> Palette
+        </div>
+        <div class="glass-card">
+          <input type="color" id="colorPicker" value="#000000" style="display: none;">
+          <div class="swatches" id="swatches">
+            <!-- Populated dynamically by script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Drawing Tools -->
+      <section class="sidebar-section">
+        <div class="section-header">
+          <span class="icon">✏️</span> Tools
+        </div>
+        <div class="glass-card">
+          <div class="btn-group">
+            <button id="brushBtn" class="active">🖌️ Brush</button>
+            <button id="eraseBtn">🧽 Eraser</button>
+          </div>
+          
+          <div class="control-group" style="margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label>Tool Size</label>
+              <span id="brushSizeDisplay" style="font-weight: 700; font-size: 0.8rem; color: var(--primary-color);">1px</span>
+            </div>
+            <input type="range" id="brushSizeSlider" min="1" max="5" value="1" step="1" style="width: 100%; margin-top: 0.25rem; cursor: pointer;">
+          </div>
+
+          <button id="clearBtn" class="btn-full">🗑️ Clear Canvas</button>
+        </div>
+      </section>
+
+      <!-- Interactive Hints -->
+      <section class="sidebar-section">
+        <div class="shortcuts">
+          <strong>Pro Tip</strong>
+          <p style="margin-top: 0.25rem; opacity: 0.8;">
+            Click a pixel, then <kbd>Shift</kbd> + Click another to fill the rectangle between them.
+          </p>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Main Canvas Area -->
+    <div class="canvas-wrapper">
+      <div id="canvasContainer" class="canvas-container">
+        <div id="grid">
+          <!-- Pixels generated dynamically by script.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
