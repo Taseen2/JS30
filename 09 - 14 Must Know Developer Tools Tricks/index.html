@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14 DevTools Tricks</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<div class="root">
+  <div class="header">
+    <span class="header-badge">DevTools Mastery</span>
+    <h1>14 tricks that actually matter</h1>
+    <p>Interactive guide to mastering the modern web debugger.</p>
+  </div>
+
+  <div class="tricks-grid" id="grid">
+
+    <!-- 01 CSS Shadow Editor -->
+    <div class="trick-card" data-tag="elements" data-id="1">
+      <div class="card-top">
+        <span class="trick-num">01</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-elements">Elements</span>
+          <div class="trick-title">CSS Shadow Editor</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Visual box-shadow builder built right into DevTools. No more external generators.</p>
+        
+        <div class="playground">
+          <span class="playground-title">Live Playground</span>
+          <div class="shadow-box-demo" id="shadowBox"></div>
+          <div class="playground-controls">
+            <div class="control-group">
+              <label>X Offset</label>
+              <input type="range" min="-50" max="50" value="10" class="shadow-slider" data-prop="x">
+            </div>
+            <div class="control-group">
+              <label>Y Offset</label>
+              <input type="range" min="-50" max="50" value="10" class="shadow-slider" data-prop="y">
+            </div>
+            <div class="control-group">
+              <label>Blur</label>
+              <input type="range" min="0" max="100" value="20" class="shadow-slider" data-prop="blur">
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Log Points -->
+    <div class="trick-card" data-tag="sources" data-id="2">
+      <div class="card-top">
+        <span class="trick-num">02</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-sources">Sources</span>
+          <div class="trick-title">Log Points</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Add console.log without touching source code. Logs survive page reloads.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Coverage Tab -->
+    <div class="trick-card" data-tag="perf" data-id="3">
+      <div class="card-top">
+        <span class="trick-num">03</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-perf">Performance</span>
+          <div class="trick-title">Coverage Tab</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">See unused CSS/JS in real time. Kill dead code. Shrink bundles fast.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Break on DOM Changes -->
+    <div class="trick-card" data-tag="elements" data-id="4">
+      <div class="card-top">
+        <span class="trick-num">04</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-elements">Elements</span>
+          <div class="trick-title">Break on DOM Changes</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Pause execution when any element mutates. Debugs mystery UI flickers instantly.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Rendering Tab -->
+    <div class="trick-card" data-tag="elements" data-id="5">
+      <div class="card-top">
+        <span class="trick-num">05</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-elements">Elements</span>
+          <div class="trick-title">Rendering Tab</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Emulate color blindness, dark mode, focus states — and catch disappearing elements.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 CSS Overview -->
+    <div class="trick-card" data-tag="elements" data-id="6">
+      <div class="card-top">
+        <span class="trick-num">06</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-elements">Elements</span>
+          <div class="trick-title">CSS Overview</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Auto-audit all colors, fonts, and contrast issues across your entire page.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Node Screenshots -->
+    <div class="trick-card" data-tag="elements" data-id="7">
+      <div class="card-top">
+        <span class="trick-num">07</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-elements">Elements</span>
+          <div class="trick-title">Node Screenshots</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Capture any element or full page without external tools or stitching hacks.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 Copy Console Logs -->
+    <div class="trick-card" data-tag="console" data-id="8">
+      <div class="card-top">
+        <span class="trick-num">08</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-console">Console</span>
+          <div class="trick-title">Copy Console Logs</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Export your entire console output to clipboard. Perfect for sharing with teammates.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 Animations Tab -->
+    <div class="trick-card" data-tag="elements" data-id="9">
+      <div class="card-top">
+        <span class="trick-num">09</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-elements">Elements</span>
+          <div class="trick-title">Animations Tab</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Record, scrub, and reverse-engineer any CSS animation. Frame by frame.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Network Throttling -->
+    <div class="trick-card" data-tag="network" data-id="10">
+      <div class="card-top">
+        <span class="trick-num">10</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-network">Network</span>
+          <div class="trick-title">Network Throttling</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Simulate 2G/3G connections to test spinners, fallbacks, and race conditions.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Conditional Breakpoints -->
+    <div class="trick-card" data-tag="sources" data-id="11">
+      <div class="card-top">
+        <span class="trick-num">11</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-sources">Sources</span>
+          <div class="trick-title">Conditional Breakpoints</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Pause only when your exact condition is true. No more clicking through 200 iterations.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Debugger Keyword -->
+    <div class="trick-card" data-tag="sources" data-id="12">
+      <div class="card-top">
+        <span class="trick-num">12</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-sources">Sources</span>
+          <div class="trick-title">Debugger Keyword</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Drop debugger in code → auto-pauses execution. Faster than setting breakpoints manually.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 DevTools Snippets -->
+    <div class="trick-card" data-tag="sources" data-id="13">
+      <div class="card-top">
+        <span class="trick-num">13</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-sources">Sources</span>
+          <div class="trick-title">DevTools Snippets</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Save reusable scripts inside DevTools. Run anytime without external files.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 Cache-Clearing Reload -->
+    <div class="trick-card" data-tag="debug" data-id="14">
+      <div class="card-top">
+        <span class="trick-num">14</span>
+        <div class="trick-meta">
+          <span class="trick-tag tag-debug">Debug</span>
+          <div class="trick-title">Cache-Clearing Reload</div>
+        </div>
+        <i class="ti ti-chevron-down expand-icon" aria-hidden="true"></i>
+      </div>
+      <div class="trick-detail">
+        <p class="trick-desc">Long-click the reload button → normal, hard, or empty-cache reload. Every debugger needs this.</p>
+        <div class="card-actions">
+          <button class="btn-learned">
+            <i class="ti ti-check"></i> Mark as Learned
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
