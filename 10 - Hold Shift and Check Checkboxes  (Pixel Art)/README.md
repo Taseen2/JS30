@@ -2,7 +2,7 @@
 
 A sophisticated, web-based pixel art editor built with Vanilla JavaScript, HTML5, and CSS3. Features a modern glassmorphic UI, responsive design, and advanced editing tools.
 
-## 🌐 Live Demo - taseen2.github.io/Pixel-Art/ 
+## 🌐 Live Demo - https://taseen2.github.io/Pixel-Art/
 
 
 [![Pixel-Studio-Advanced-Editor.png](https://i.postimg.cc/QCbmxLPx/Pixel-Studio-Advanced-Editor.png)](https://postimg.cc/MfnVdLqh)
