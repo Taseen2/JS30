@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shhhh!.....</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Mystery Page</h1>
+        <p>There's nothing to see here... or is there?</p>
+        <p class="hint">Try entering the legendary Konami Code.</p>
+        <div class="controls">
+            <kbd data-key="ArrowUp">↑</kbd>
+            <kbd data-key="ArrowUp">↑</kbd>
+            <kbd data-key="ArrowDown">↓</kbd>
+            <kbd data-key="ArrowDown">↓</kbd>
+            <kbd data-key="ArrowLeft">←</kbd>
+            <kbd data-key="ArrowRight">→</kbd>
+            <kbd data-key="ArrowLeft">←</kbd>
+            <kbd data-key="ArrowRight">→</kbd>
+            <kbd data-key="b">b</kbd>
+            <kbd data-key="a">a</kbd>
+        </div>
+    </div>
+
+    <!-- Meme Mode Overlay -->
+    <div id="meme-mode-overlay" class="hidden">
+        <div class="overlay-content">
+            <h2 class="glow-text">MEME MODE ACTIVATED 🚀</h2>
+            <div class="overlay-actions">
+                <button id="toggle-sound" class="glass-btn">🔊 Disable Sound</button>
+                <button id="close-meme-mode" class="glass-btn">Exit Meme Mode</button>
+            </div>
+        </div>
+        <div id="meme-container"></div>
+        <div id="emoji-container"></div>
+        <div id="quote-container"></div>
+    </div>
+
+    <!-- Achievement Popup -->
+    <div id="achievement-popup" class="achievement hidden">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-text">
+            <h3>Achievement Unlocked</h3>
+            <p>Meme Lord</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
